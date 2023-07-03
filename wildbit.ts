@@ -113,34 +113,6 @@ namespace wildbit {
         pins.i2cWriteBuffer(PCA9685_ADDRESS, buf)
     }
 
-    function setStepper(index: number, dir: boolean): void {
-        if (index == 1) {
-            if (dir) {
-                setPwm(0, STP_CHA_L, STP_CHA_H)
-                setPwm(3, STP_CHB_L, STP_CHB_H)
-                setPwm(1, STP_CHC_L, STP_CHC_H)
-                setPwm(2, STP_CHD_L, STP_CHD_H)
-            } else {
-                setPwm(2, STP_CHA_L, STP_CHA_H)
-                setPwm(1, STP_CHB_L, STP_CHB_H)
-                setPwm(3, STP_CHC_L, STP_CHC_H)
-                setPwm(0, STP_CHD_L, STP_CHD_H)
-            }
-        }
-        else {
-            if (dir) {
-                setPwm(4, STP_CHA_L, STP_CHA_H)
-                setPwm(7, STP_CHB_L, STP_CHB_H)
-                setPwm(5, STP_CHC_L, STP_CHC_H)
-                setPwm(6, STP_CHD_L, STP_CHD_H)
-            } else {
-                setPwm(6, STP_CHA_L, STP_CHA_H)
-                setPwm(5, STP_CHB_L, STP_CHB_H)
-                setPwm(7, STP_CHC_L, STP_CHC_H)
-                setPwm(4, STP_CHD_L, STP_CHD_H)
-            }
-        }
-    }
 
     function stopMotor(index: number) {
         setPwm((index - 1) * 2, 0, 0)
