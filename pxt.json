@@ -11,7 +11,8 @@
     "files": [
         "README.md",
         "main.blocks",
-        "main.ts"
+        "main.ts",
+        "wildbit.ts"
     ],
     "testFiles": [
         "test.ts"
