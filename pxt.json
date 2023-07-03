@@ -5,6 +5,7 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
+        "neopixel": "github:microsoft/pxt-neopixel",
         "microphone": "*"
     },
     "files": [
@@ -23,5 +24,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
