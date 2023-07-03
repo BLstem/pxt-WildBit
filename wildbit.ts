@@ -1,5 +1,5 @@
 // Add your code here
-//% color=#FFB600 weight=10 icon="\uf085"
+//% color=#FFB600 weight=10 icon="\uf1e6"
 
 namespace wildbit {
 
