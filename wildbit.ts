@@ -222,7 +222,7 @@ namespace wildbit {
     }
 
     /**
-     * Init RGB pixels mounted on robotbit
+     * Init RGB pixels mounted on the board.
      */
     //% blockId="robotbit_rgb" block="RGB"
     //% weight=70
