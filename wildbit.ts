@@ -41,10 +41,10 @@ namespace wildbit {
 
 
     export enum Servos {
-        S0 = 0x01,
-        S1 = 0x02,
-        S2 = 0x03,
-        S3 = 0x04
+        S1 = 0x01,
+        S2 = 0x02,
+        S3 = 0x03,
+        S4 = 0x04
     }
 
     export enum Motors {
