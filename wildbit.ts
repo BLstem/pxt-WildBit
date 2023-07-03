@@ -38,7 +38,6 @@ namespace wildbit {
 
     let initialized = false
     let neoStrip: neopixel.Strip;
-    let matBuf = pins.createBuffer(17);
 
 
     export enum Servos {
