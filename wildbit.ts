@@ -66,11 +66,6 @@ namespace wildbit {
         pins.i2cWriteBuffer(addr, buf)
     }
 
-    function i2ccmd(addr: number, value: number) {
-        let buf = pins.createBuffer(1)
-        buf[0] = value
-        pins.i2cWriteBuffer(addr, buf)
-    }
 
     function i2cread(addr: number, reg: number) {
         pins.i2cWriteNumber(addr, reg, NumberFormat.UInt8BE)
@@ -223,7 +218,7 @@ namespace wildbit {
     /**
      * Init RGB pixels mounted on the board.
      */
-    //% blockId="robotbit_rgb" block="RGB"
+    //% block="RGB"
     //% weight=70
     export function rgb(): neopixel.Strip {
         if (!neoStrip) {
