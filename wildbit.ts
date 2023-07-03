@@ -174,7 +174,6 @@ namespace wildbit {
     */
     //% blockId=wildbit_servo block="Servo|%index|to angle|%degree|º"
     //% weight=100
-    //% blockGap=50
     //% degree.min=0 degree.max=180
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Servo(index: Servos, degree: number): void {
