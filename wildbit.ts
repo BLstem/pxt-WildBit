@@ -187,6 +187,12 @@ namespace wildbit {
         MotorRun(index, 0);
     }
 
+    //% block="Stop ALL motors"
+    //% weight=75
+    export function allMotorStop(): void {
+        MotorStopAll()
+    }
+
     /**
      * Init RGB pixels mounted on the board.
      */
