@@ -112,9 +112,9 @@ namespace wildbit {
 
 
     /**
-     * Init RGB pixels mounted on robotbit
+     * Init RGB pixels mounted on board
      */
-    //% blockId="robotbit_rgb" block="RGB"
+    //% blockId="board_rgb" block="RGB"
     //% weight=70
     export function rgb(): neopixel.Strip {
         if (!neoStrip) {
@@ -129,7 +129,7 @@ namespace wildbit {
      * @param index Servo Channel; eg: S1
      * @param degree [0-180] degree of servo; eg: 0, 90, 180
     */
-    //% blockId=robotbit_servo block="Servo|%index|degree %degree"
+    //% blockId=board_servo block="Servo|%index|degree %degree"
     //% group="Servo" weight=62
     //% degree.min=0 degree.max=180
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -143,48 +143,8 @@ namespace wildbit {
         setPwm(index + 7, 0, value)
     }
 
-    /**
-     * Geek Servo
-     * @param index Servo Channel; eg: S1
-     * @param degree [-45-225] degree of servo; eg: -45, 90, 225
-    */
-    //% blockId=robotbit_gservo block="Geek Servo|%index|degree %degree"
-    ///% group="Servo" weight=61
-    //% degree.min=-45 degree.max=225
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function GeekServo(index: Servos, degree: number): void {
-        if (!initialized) {
-            initPCA9685()
-        }
-        // 50hz: 20,000 us
-        let v_us = ((degree - 90) * 20 / 3 + 1500) // 0.6 ~ 2.4
-        let value = v_us * 4096 / 20000
-        setPwm(index + 7, 0, value)
-    }
 
-    /**
- * GeekServo2KG
- * @param index Servo Channel; eg: S1
- * @param degree [0-360] degree of servo; eg: 0, 180, 360
-*/
-    //% blockId=robotbit_gservo2kg block="GeekServo2KG|%index|degree %degree"
-    //% group="Servo" weight=60
-    //% blockGap=50
-    //% degree.min=0 degree.max=360
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function GeekServo2KG(index: Servos, degree: number): void {
-        if (!initialized) {
-            initPCA9685()
-        }
-        // 50hz: 20,000 us
-        //let v_us = (degree * 2000 / 360 + 500)  0.5 ~ 2.5
-        let v_us = (Math.floor((degree) * 2000 / 350) + 500) //fixed
-        let value = v_us * 4096 / 20000
-        setPwm(index + 7, 0, value)
-    }
-
-
-    //% blockId=robotbit_motor_run block="Motor|%index|speed %speed"
+    //% blockId=board_motor_run block="Motor|%index|speed %speed"
     //% group="Motor" weight=59
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -220,7 +180,7 @@ namespace wildbit {
      * @param motor2 Second Motor; eg: M2A, M2B
      * @param speed2 [-255-255] speed of motor; eg: 150, -150
     */
-    //% blockId=robotbit_motor_dual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
+    //% blockId=board_motor_dual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
     //% group="Motor" weight=58
     //% speed1.min=-255 speed1.max=255
     //% speed2.min=-255 speed2.max=255
@@ -236,7 +196,7 @@ namespace wildbit {
      * @param speed [-255-255] speed of motor; eg: 150, -150
      * @param delay seconde delay to stop; eg: 1
     */
-    //% blockId=robotbit_motor_rundelay block="Motor|%index|speed %speed|delay %delay|s"
+    //% blockId=board_motor_rundelay block="Motor|%index|speed %speed|delay %delay|s"
     //% group="Motor" weight=57
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -248,13 +208,13 @@ namespace wildbit {
 
 
 
-    //% blockId=robotbit_stop block="Motor Stop|%index|"
+    //% blockId=board_stop block="Motor Stop|%index|"
     //% group="Motor" weight=56
     export function MotorStop(index: Motors): void {
         MotorRun(index, 0);
     }
 
-    //% blockId=robotbit_stop_all block="Motor Stop All"
+    //% blockId=board_stop_all block="Motor Stop All"
     //% group="Motor" weight=55
     //% blockGap=50
     export function MotorStopAll(): void {
