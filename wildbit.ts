@@ -115,6 +115,7 @@ namespace wildbit {
     //% blockId=board_servo block="Servo|%index|degree %degree"
     //% group="Servo" weight=62
     //% degree.min=0 degree.max=180
+    //% degree.shadow="protractorPicker"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Servo(index: Servos, degree: number): void {
         if (!initialized) {
