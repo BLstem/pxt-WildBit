@@ -12,7 +12,8 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "wildbit.ts"
+        "wildbit.ts",
+        "_locales/zh-tw/wildbit-strings.json"
     ],
     "testFiles": [
         "test.ts"
