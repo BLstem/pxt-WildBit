@@ -1,5 +1,4 @@
 {
-  "wildbit.rgb|block":"RGB",
   "wildbit.servo|block":"Servo|%index|degree %degree",
   "wildbit.MotorRun|block":"Motor|%index|speed %speed",
   "wildbit.MotorRumDual|block":"Motor|%motor1|speed %speed1|%motor2|speed %speed2",
