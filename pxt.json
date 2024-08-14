@@ -13,7 +13,6 @@
         "main.blocks",
         "main.ts",
         "wildbit.ts",
-        "_locales/wildbit-strings.json",
         "_locales/zh-tw/wildbit-strings.json"
     ],
     "testFiles": [
