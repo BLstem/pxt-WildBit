@@ -3,6 +3,6 @@
   "wildbit.MotorRun|block": "Motor|%index|speed %speed",
   "wildbit.MotorRunDual|block": "Motor|%motor1|speed %speed1|%motor2|speed %speed2",
   "wildbit.MotorRunDelay|block": "Motor|%index|speed %speed|delay %delay|s",
-  "Wildbit.MotorStop|block": "Motor Stop|%index|",
-  "Wildbit.MotorStopAll|block": "Motor Stop All"
+  "wildbit.MotorStop|block": "Motor Stop|%index|",
+  "wildbit.MotorStopAll|block": "Motor Stop All"
 }
