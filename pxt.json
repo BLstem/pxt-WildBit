@@ -1,5 +1,5 @@
 {
-    "name": "pxt-wildbit",
+    "name": "wildbit",
     "version": "0.0.0",
     "description": "",
     "dependencies": {
@@ -12,14 +12,15 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "wildbit.ts"
+        "wildbit.ts",
+        "_locales/zh-tw/wildbit-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "public": true,
     "targetVersions": {
-        "target": "6.0.15",
+        "target": "6.0.28",
         "targetId": "microbit"
     },
     "supportedTargets": [

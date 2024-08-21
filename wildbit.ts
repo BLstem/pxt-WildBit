@@ -107,7 +107,7 @@ namespace wildbit {
         return neoStrip;
     }
 
-    /**
+    /*
      * Servo Execute
      * @param index Servo Channel; eg: S1
      * @param degree [0-180] degree of servo; eg: 0, 90, 180
@@ -115,6 +115,7 @@ namespace wildbit {
     //% blockId=board_servo block="Servo|%index|degree %degree"
     //% group="Servo" weight=62
     //% degree.min=0 degree.max=180
+    //% degree.shadow="protractorPicker"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Servo(index: Servos, degree: number): void {
         if (!initialized) {
@@ -168,6 +169,7 @@ namespace wildbit {
     //% speed1.min=-255 speed1.max=255
     //% speed2.min=-255 speed2.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    //% inlineInputMode=inline
     export function MotorRunDual(motor1: Motors, speed1: number, motor2: Motors, speed2: number): void {
         MotorRun(motor1, speed1);
         MotorRun(motor2, speed2);

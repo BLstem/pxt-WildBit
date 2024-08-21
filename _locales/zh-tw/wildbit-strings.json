@@ -1,0 +1,8 @@
+{
+  "wildbit.Servo|block": "伺服馬達|%index|角度 %degree",
+  "wildbit.MotorRun|block": "馬達|%index|速度 %speed",
+  "wildbit.MotorRunDual|block": "馬達|%motor1|速度 %speed1 |%motor2|速度 %speed2",
+  "wildbit.MotorRunDelay|block": "馬達|%index|速度 %speed|持續 %delay|秒",
+  "wildbit.MotorStop|block": "馬達 停止|%index|運作",
+  "wildbit.MotorStopAll|block": "停止所有馬達"
+}

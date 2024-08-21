@@ -18,6 +18,9 @@ To edit this repository in MakeCode.
 * click on **Import** then click on **Import URL**
 * paste **https://github.com/doralc/pxt-wildbit** and click import
 
+## Hardware
+![expansion_board_wildbit_marked_eng](https://github.com/user-attachments/assets/449beb96-542e-4b1a-8491-aac0ecf3d766)
+
 #### Metadata (used for search, rendering)
 
 * for PXT/microbit
